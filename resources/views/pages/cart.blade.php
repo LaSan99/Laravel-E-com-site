@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="flex flex-col lg:flex-row gap-8">
-    <!-- Cart Items -->
+    <!-- Cart Items1 -->
     <div class="flex-1">
         <h1 class="text-2xl font-bold mb-6">Shopping Cart</h1>
         
