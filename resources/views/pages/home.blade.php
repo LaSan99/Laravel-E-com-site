@@ -3,7 +3,7 @@
 @section('content')
 <!-- Hero Section -->
 <div class="relative overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white mb-12 rounded-3xl">
-    <div class="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
+    <div class="absolute inset-0 opacity-10"></div>
     <div class="container mx-auto px-4 py-24 relative">
         <div class="max-w-3xl">
             <span class="inline-block px-4 py-1 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-6">

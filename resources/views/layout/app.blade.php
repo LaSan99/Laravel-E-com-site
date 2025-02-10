@@ -15,5 +15,8 @@
     </main>
 
     @include('components.footer')
+    
+    <!-- Add this line to enable scripts from components -->
+    @stack('scripts')
 </body>
 </html>

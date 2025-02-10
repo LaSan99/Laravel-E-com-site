@@ -26,7 +26,7 @@
             </div>
 
             <!-- Mobile Menu Button -->
-            <button class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -34,7 +34,7 @@
         </div>
 
         <!-- Mobile Navigation -->
-        <div class="hidden md:hidden pb-4">
+        <div id="mobile-menu" class="hidden md:hidden pb-4">
             <a href="{{ route('shop') }}" class="block py-2 text-gray-600 hover:text-blue-600">Shop</a>
             <a href="#" class="block py-2 text-gray-600 hover:text-blue-600">Categories</a>
             <a href="#" class="block py-2 text-gray-600 hover:text-blue-600">Deals</a>
@@ -43,3 +43,22 @@
         </div>
     </div>
 </nav>
+
+@push('scripts')
+<script>
+    // Mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        
+        if (!mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
+            mobileMenu.classList.add('hidden');
+        }
+    });
+</script>
+@endpush
